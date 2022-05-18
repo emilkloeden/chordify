@@ -96,7 +96,7 @@ function applyTransformBasedOnLineType(line, keys, knownChords) {
     const openTags = "<pre><code>"
     const closeTags = "</code></pre>"
 
-    if (openTags.test(line)) {
+    if (/<pre><code>/.test(line)) {
         line = line.replace(openTags, "").replace(closeTags, "")
         replacePreCode = true
     }
