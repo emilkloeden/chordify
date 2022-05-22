@@ -77,13 +77,13 @@ function chordLine(line, knownChords) {
  * @param {any} songData
  * @returns {any}
  */
-function chordify(songData) {
+function chordify(songData, cb = applyTransformBasedOnLineType) {
     // The eleventy filter is expected to take the whole song as data, passed as a single argument
     // ... hence chords need to be loaded here
     const knownChords = getKnownChords()
     const keys = Array.from(knownChords.keys())
     const songLines = songData.split("\n")
-    const highlightedLines = songLines.map(line => applyTransformBasedOnLineType(line, keys, knownChords))
+    const highlightedLines = songLines.map(line => cb(line, keys, knownChords))
     return highlightedLines.join("\n")
 }
 
