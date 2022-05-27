@@ -1,6 +1,6 @@
 {
   "name": "@emilkloeden/chordify",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Extract known chords from a line of text",
   "main": "index.js",
   "scripts": {

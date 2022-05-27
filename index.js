@@ -113,4 +113,4 @@ function applyTransformBasedOnLineType(line, keys, knownChords) {
     return `${startString}${chordLine(line, knownChords)}`
 }
 
-module.exports = { chordify, chordifyLine: convertToChords, isChordLine, isBlockLine } 
+module.exports = { chordify, chordifyLine: convertToChords, isChordLine, isBlockLine, getKnownChords } 
